@@ -1,0 +1,74 @@
+.dialog
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  display grid
+  grid-template-columns 1fr
+  grid-template-rows 1fr
+
+  &__title
+    text-align center
+    font-size 1.5rem
+    margin-bottom 20px
+
+  &__overlay
+    position relative
+    content ''
+    background rgba(0, 0, 0, 0.7)
+    z-index 5
+
+  &__content
+    position relative
+    align-self center
+    justify-self center
+    padding 20px
+    border-radius 4px
+    z-index 10
+    margin-top -30vh
+  
+    background #fff
+
+  &__input
+    display block
+    width 100%
+    border-bottom 2px solid #333
+    padding 2px 5px
+
+    &:focus
+      border-bottom-color #6db0ff
+
+    &--error
+      border-bottom-color #c0392b
+
+  &__err-msg
+    color #c0392b
+    font-size 0.95rem
+    margin 10px 0
+
+  &__footer
+    margin-top 20px
+    display flex
+    justify-content flex-end
+
+  &__btn
+    text-shadow 0 2px 5px rgba(0, 0, 0, 0.26)
+    font-size 0.95rem
+    padding 5px 10px
+    margin-left 20px
+    cursor pointer
+
+    &--danger
+      background #c0392b
+      color #fff
+
+    &--success
+      background #6db0ff
+      box-shadow 0 2px 5px rgba(0, 0, 0, 0.26)
+      color #fff
+
+  &__content,
+  &__overlay
+    grid-row 1 / 2
+    grid-column 1 / 2

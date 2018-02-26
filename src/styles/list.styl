@@ -1,0 +1,64 @@
+.list
+  margin 40px 0
+  padding 20px
+  background #fff
+
+  &__header
+    padding 20px 0
+    display flex
+    justify-content space-between
+
+  &__btn
+    cursor pointer
+
+  &__input
+    display block
+    width 100%
+
+  &__footer
+    margin-top 30px
+
+.list-item
+  display flex
+  align-items center
+  margin-bottom 20px
+
+  &__done
+    height 24px
+    width 24px
+    display flex
+    justify-content center
+    align-items center
+    border-radius 4px
+    background #AED3FF
+    margin-right 20px
+    box-shadow 0 2px 5px rgba(0, 0, 0, 0.26)
+
+  &__delete
+    margin-left auto
+
+  &__title
+    position relative
+    transition color 300ms ease-in-out
+
+    &::before
+      content ''
+      position absolute
+      height 2px
+      background #D1D1D1
+      left -5px 
+      right -5px
+      top 50%
+      transform scale3d(0, 1, 1)
+      transform-origin center left
+      transition transform 300ms ease-in-out
+
+  &--done
+    .list-item__done
+      background #6db0ff
+
+    .list-item__title
+      color #D1D1D1
+
+      &::before
+        transform scale3d(1, 1, 1)

@@ -1,0 +1,36 @@
+@import './header.styl'
+@import './dialog.styl'
+@import './list.styl'
+
+*
+  box-sizing border-box
+
+body
+  font-family Arial, Helvetica, sans-serif
+  font-size 18px
+  background #eee
+  color #333
+
+h1, h2, h3, h4, h5, h6, p, body
+  margin 0
+  
+ul
+  padding 0
+  list-style-type none
+
+button,
+input
+  border-width 0
+  background transparent
+  font-size inherit 
+  font-family inherit
+
+  &:focus
+    outline-width 0
+
+#app
+  width 100%
+  max-width 740px
+  margin 20px auto
+  padding 0 20px
+  

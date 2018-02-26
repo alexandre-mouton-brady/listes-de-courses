@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Liste de courses</title>
+
+  <meta name="application-name" content="Listes de courses">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Faire des cours n'a jamais été aussi simple">
+
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" href="/imgs/favicon.png">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+          console.log('Offline mode activated 🔥😎🔥');
+        }).catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div id="app">
+    <h1 style="font-family: sans-serif; color: #333; width: 100%; max-width: 740px; margin: auto;">Le site est en train de charger ma MAN, si c'est trop long, ça veut dire que ça a merdé quelque part :/</h1>
+  </div>
+</body>
+
+</html>
